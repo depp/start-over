@@ -965,13 +965,13 @@
    */
   let keyMap = {
     // named keys
-    13: 'enter',
-    27: 'esc',
-    32: 'space',
-    37: 'left',
-    38: 'up',
-    39: 'right',
-    40: 'down'
+    'Enter': 'enter',
+    'Escape': 'esc',
+    'Space': 'space',
+    'ArrowLeft': 'left',
+    'ArrowUp': 'up',
+    'ArrowRight': 'right',
+    'ArrowDown': 'down'
   };
 
   /**
@@ -980,7 +980,7 @@
    * @param {KeyboardEvent} evt
    */
   function keydownEventHandler(evt) {
-    let key = keyMap[evt.which];
+    let key = keyMap[evt.code];
     pressedKeys[key] = true;
 
     if (callbacks$1[key]) {
